@@ -6,10 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private  Button boton, boton2;
-    private TextView txtVista, txtVista2;
+    private TextView txtVista;
     String alumno;
 
     @Override
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 txtVista.setText("Bienvenido a Github "+alumno);
+                Toast.makeText(MainActivity.this,"Se cambio el mensaje en el textView con el botón Github", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 txtVista.setText("Bienvenido al Diplomado Android "+alumno);
+                Toast.makeText(MainActivity.this,"Se cambio el mensaje en el textView con el botón Diplomado", Toast.LENGTH_SHORT).show();
             }
         });
     }
